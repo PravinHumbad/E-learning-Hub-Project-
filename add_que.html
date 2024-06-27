@@ -1,0 +1,51 @@
+<style>
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formbox{
+    display: grid;
+    height: 700px;
+    margin: 400px;
+    margin-top: 70px;
+    grid-gap: 30px;
+}
+.box{
+    text-align: center;
+    border-radius: 10px;
+border: 5px solid rgb(10, 8, 4);
+filter: drop-shadow(20px 20px 20px black);
+}
+
+.box1{
+    border-radius: 10px;
+border: 5px solid rgb(10, 8, 4);
+
+    position:  relative;
+    margin-top: 60px;
+    margin-left: 95px;
+    width: 500px;
+    background-color: aqua;
+    transition: ease-in-out .5s;
+}
+.box1:hover{
+    cursor: pointer;
+    scale: 1.05;
+    filter: drop-shadow(20px 20px 20px black);
+}
+
+</style>
+
+
+<h2>Quiz Question</h2>
+    <form class="formbox" method="post" action="add_quiz_question.php">
+        <textarea class="box" name="question" placeholder="Enter your question" required></textarea>
+        <input class="box"type="text" name="option1" placeholder="Option 1" required>
+        <input class="box"type="text" name="option2" placeholder="Option 2" required>
+        <input class="box"type="text" name="option3" placeholder="Option 3" required>
+        <input class="box"type="text" name="option4" placeholder="Option 4" required>
+        <input class="box"type="text" name="correct_answer" placeholder="Correct Answer (Option number)" required>
+        <button class="box1" type="submit" class="option-btn">Add Quiz Question</button>
+    </form>
